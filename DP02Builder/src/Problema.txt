@@ -1,0 +1,4 @@
+Constructie calculator
+
+Un Director coordoneaza construirea unui Produs (calculator) folosind un Builder. 
+Builder concret adauga componentele pas cu pas: procesor, memorie, stocare.

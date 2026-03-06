@@ -1,0 +1,21 @@
+Builder pattern (cand il folosim):
+1. Il utilizam cand constructia unui obiect complex necesita mai multi pasi, iar ordinea si
+combinatia acestor pasi poate varia.
+2. Il utilizam cand vrem sa construim diferite reprezentari ale aceluiasi produs folosind
+acelasi proces de constructie (ex: calculator de gaming vs calculator de birou).
+3. Il utilizam cand constructorul cu multi parametri devine greu de folosit si inteles, Builder
+oferind o alternativa mai clara si mai flexibila.
+4. Il utilizam cand vrem sa separam codul de constructie a unui obiect de codul care il foloseste,
+respectand principiul responsabilitatii unice.
+
+Cum se implementeaza Builder pattern:
+1. Cream clasa Produs care reprezinta obiectul complex ce trebuie construit, cu toate campurile
+si metodele sale.
+2. Declaram clasa abstracta AbstractBuilder cu metodele de adaugare a componentelor
+(adaugaComponenta1, adaugaComponenta2 etc.) si metoda getProdus() care returneaza produsul final.
+3. Cream clasa concreta Builder care extinde AbstractBuilder, instantiaza un Produs intern si
+implementeaza fiecare metoda de adaugare a componentelor.
+4. Cream clasa Director care primeste un AbstractBuilder si defineste metoda construieste() ce
+apeleaza metodele builder-ului intr-o ordine specifica.
+5. In client (Main), cream Builder-ul si Director-ul, apelam construieste() si obtinem produsul
+final prin getProdus().

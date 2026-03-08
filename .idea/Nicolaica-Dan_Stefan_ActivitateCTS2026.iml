@@ -9,6 +9,9 @@
       <sourceFolder url="file://$MODULE_DIR$/DP13Strategy/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DP14Observer" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DP17Command" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DP01Singleton/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DP02Builder" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DP03SimpleFactory" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,0 +1,4 @@
+Fabrica de animale
+
+Clientul cere fabricii (Factory) un animal dupa tip. 
+Fabrica creeaza si returneaza obiectul corespunzator fara ca Clientul sa stie cum e construit.

@@ -1,0 +1,18 @@
+Simple Factory pattern (cand il folosim):
+1. Il utilizam cand vrem sa centralizam logica de creare a obiectelor intr-un singur loc, astfel
+incat clientul sa nu fie responsabil de instantierea directa a claselor concrete.
+2. Il utilizam cand avem mai multe clase care implementeaza aceeasi interfata si vrem sa alegem
+dinamic care dintre ele sa fie creata, in functie de un parametru primit.
+3. Il utilizam cand vrem sa ascundem detaliile de constructie ale obiectelor fata de client,
+reducand cuplarea dintre client si clasele concrete.
+4. Il utilizam ca punct de pornire simplu cand nu avem nevoie de flexibilitatea completa oferita
+de Factory Method sau Abstract Factory.
+
+Cum se implementeaza Simple Factory pattern:
+1. Declaram interfata InterfataProdus cu metodele comune tuturor produselor.
+2. Cream clasele concrete (Caine, Pisica etc.) care implementeaza InterfataProdus cu
+comportamentul lor specific.
+3. Cream clasa Factory cu metoda getProdus(argumente) care primeste un parametru de tip String
+sau enum si returneaza instanta corespunzatoare a clasei concrete.
+4. In client (Main), cream o instanta a fabricii si apelam getProdus() cu parametrul dorit.
+Clientul lucreaza doar cu interfata InterfataProdus, fara sa cunoasca clasele concrete.

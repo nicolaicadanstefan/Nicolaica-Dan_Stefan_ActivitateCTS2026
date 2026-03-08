@@ -1,0 +1,5 @@
+Fabrica de vehicule
+
+AbstractFactory defineste metoda getProdus(). 
+FactoryConcretA produce Masina, FactoryConcretB produce Motocicleta. 
+Clientul foloseste fabrica fara sa stie ce tip concret se creeaza.

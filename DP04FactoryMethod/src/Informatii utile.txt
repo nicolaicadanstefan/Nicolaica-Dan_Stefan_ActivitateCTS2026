@@ -1,0 +1,20 @@
+Factory Method pattern (cand il folosim):
+1. Il utilizam cand nu cunoastem dinainte tipul exact al obiectului care trebuie creat, iar
+decizia de instantiere trebuie lasata subclaselor.
+2. Il utilizam cand vrem sa oferim utilizatorilor framework-ului sau bibliotecii noastre o
+modalitate de a extinde componentele interne prin subclasare, fara a modifica codul existent.
+3. Il utilizam cand vrem sa reutilizam obiecte existente in loc sa cream altele noi de fiecare
+data, economisind astfel resurse de sistem.
+4. Il utilizam cand avem o ierarhie de fabrici paralela cu o ierarhie de produse si vrem sa
+pastram o corespondenta clara intre ele.
+
+Cum se implementeaza Factory Method pattern:
+1. Declaram interfata InterfataProdus cu metodele comune tuturor produselor pe care le poate
+crea fabrica.
+2. Cream clasele concrete de produs (Masina, Motocicleta etc.) care implementeaza InterfataProdus.
+3. Cream clasa abstracta AbstractFactory cu metoda abstracta getProdus() (factory method) si
+optional alte metode comune.
+4. Cream clasele concrete FactoryConcretA, FactoryConcretB care extind AbstractFactory si
+implementeaza getProdus() returnand instanta specifica de produs.
+5. In client (Main), folosim referinte de tip AbstractFactory si apelam getProdus() fara a
+cunoaste tipul concret al fabricii sau al produsului creat.

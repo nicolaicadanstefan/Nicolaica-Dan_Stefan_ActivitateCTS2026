@@ -1,0 +1,19 @@
+Prototype pattern (cand il folosim):
+1. Il utilizam cand crearea unui obiect nou este costisitoare sau complexa, iar clonarea unui
+obiect existent este mai eficienta decat construirea lui de la zero.
+2. Il utilizam cand vrem sa cream obiecte noi care sunt similare cu cele existente, modificand
+doar anumite proprietati ale clonei fara a afecta originalul.
+3. Il utilizam cand codul nu trebuie sa depinda de clasele concrete ale obiectelor pe care le
+copiaza, lucrand doar cu interfata AbstractPrototype.
+4. Il utilizam in jocuri, simulari sau aplicatii grafice unde exista multe obiecte similare care
+trebuie instantiate rapid pornind de la un model (prototip).
+
+Cum se implementeaza Prototype pattern:
+1. Declaram clasa abstracta AbstractPrototype cu metoda abstracta clone() care va returna o
+copie a obiectului curent.
+2. Cream clasele concrete Prototype1, Prototype2 etc. care extind AbstractPrototype, au propriile
+campuri si implementeaza clone() returnand un obiect nou cu aceleasi valori.
+3. Metoda clone() din fiecare clasa concreta creeaza o instanta noua a aceleiasi clase, copiind
+valorile campurilor din obiectul curent (this) in noul obiect.
+4. In client (Main), cream obiectele originale si le clonam prin clone() ori de cate ori avem
+nevoie de o copie. Clona este un obiect independent, modificarile pe clona nu afecteaza originalul.

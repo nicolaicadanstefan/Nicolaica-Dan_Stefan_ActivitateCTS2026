@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/DP02Builder" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DP03SimpleFactory" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DP04FactoryMethod" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DP06Prototype" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

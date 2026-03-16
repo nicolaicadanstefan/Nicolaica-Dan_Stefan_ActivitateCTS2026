@@ -1,0 +1,4 @@
+Clonare personaje de joc
+
+Jocul are personaje (Prototype1 = Razboinic, Prototype2 = Magician).
+In loc sa cream personaje noi de la zero, le clonam pe cele existente prin metoda clone().

@@ -1,0 +1,4 @@
+Conexiune la baza de date
+
+Aplicatia trebuie sa aiba o singura conexiune la baza de date.
+Clasa Singleton garanteaza ca se creeaza doar un singur obiect, indiferent de câte ori este apelat getInstanta().

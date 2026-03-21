@@ -1,0 +1,19 @@
+Singleton pattern (cand il folosim):
+1. Il utilizam cand vrem sa garantam ca o clasa are o singura instanta in intreaga aplicatie,
+de exemplu pentru conexiuni la baza de date, fisiere de configurare sau manageri de resurse.
+2. Il utilizam cand acea instanta unica trebuie sa fie accesibila global din orice parte a aplicatiei
+printr-un punct de acces comun (getInstanta()).
+3. Il utilizam cand crearea repetata a unui obiect ar consuma resurse semnificative si dorim sa
+reutilizam aceeasi instanta pe toata durata aplicatiei.
+4. Il utilizam cand avem nevoie de un obiect care coordoneaza actiuni la nivel de sistem, precum
+un logger, un thread pool sau un manager de configuratii.
+
+Cum se implementeaza Singleton pattern:
+1. Adaugam un camp static privat in clasa care va stoca unica instanta a clasei: private static
+Singleton instanta.
+2. Facem constructorul clasei privat pentru a preveni instantierea directa din exterior:
+private Singleton().
+3. Cream o metoda statica publica getInstanta() care verifica daca instanta exista. Daca nu
+exista, o creeaza si o stocheaza in campul static. Returneaza mereu aceeasi instanta.
+4. In client (Main), apelam Singleton.getInstanta() in loc de new Singleton() pentru a obtine
+instanta unica. Orice apel ulterior returneaza acelasi obiect.

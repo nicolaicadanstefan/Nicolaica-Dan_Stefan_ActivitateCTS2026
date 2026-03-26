@@ -1,0 +1,11 @@
+În cadrul aplicației de gestiune a mall-ului, se dorește implementarea unui modul de procesare a plăților.
+Sistemul nou al mall-ului operează exclusiv în RON și folosește interfața PlataProcessor
+cu metoda proceseazaPlataRON(double suma).
+Există deja un sistem extern de plăți al unui partener bancar, SistemBancarEuro,
+care nu poate fi modificat și care expune metoda proceseazaPlataEURO(double suma).
+Cursul de schimb valutar este 1 EUR = 5 RON.
+Restricții de implementare:
+
+-suma în RON nu poate fi mai mică de 5 RON
+-suma în EURO rezultată după conversie nu poate depăși 10.000 EUR
+-orice restricție aruncă o excepție custom cu mesajul aferent

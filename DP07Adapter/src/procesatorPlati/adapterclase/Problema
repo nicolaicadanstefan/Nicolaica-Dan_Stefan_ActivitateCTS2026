@@ -1,0 +1,13 @@
+In cadrul aceluiași mall, se dorește un modul de gestionare a parcarii.
+Exista deja o clasa MasinaParcare care nu poate fi modificata și care contine metoda calculeazaTarifOrar()
+ce returneaza un tarif in RON/ora ca double.
+Sistemul nou al mall-ului folosește interfata VehiculParcare cu metodele:
+
+getTarifOrar() — returneaza tariful orar
+getTarifZilnic() — returneaza tariful zilnic (se calculeaza ca 24 * tarifOrar cu o reducere de 20%)
+
+Restrictii de implementare:
+
+tariful orar nu poate fi negativ
+tariful zilnic nu poate depași 500 RON
+orice restrictie arunca o exceptie custom cu mesajul aferent

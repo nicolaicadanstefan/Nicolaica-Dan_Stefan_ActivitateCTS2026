@@ -1,0 +1,7 @@
+Esti un programator care lucreaza la o aplicatie de vreme. Aplicatia foloseste interfata WeatherProvider care contine
+metoda getTemperatureCelsius() ce returneaza temperatura în grade Celsius.
+Ai gasit o librarie externa utila, OldWeatherService, care are o temperatura stocata în Fahrenheit și o metoda
+getTemperatureFahrenheit() ce o returneaza. Nu ai voie sa modifici OldWeatherService.
+Implementeaza pattern-ul Adapter de obiecte care permite aplicatiei tale sa foloseasca OldWeatherService prin interfata
+WeatherProvider.
+Formula de conversie: Celsius = (Fahrenheit - 32) * 5/9

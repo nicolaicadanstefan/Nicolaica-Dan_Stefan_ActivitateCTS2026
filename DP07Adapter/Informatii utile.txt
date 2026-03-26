@@ -1,0 +1,19 @@
+Adapter pattern (cand il folosim):
+1. Cand vrem sa folosim deja o clasa existenta, dar interfata nu e compatibila cu restul codului
+2. Ne ajuta sa creem clase de mijloc care au rolul de a translata codul nou cu cel de pe clasa veche
+3. Avem subclase care nu au functionalitate comuna si acea functionalitate nu poate fi adaugata in superclasa.
+4. Poti extinde clasele parinte punand functionalitatea lipsa in clasele copil noi, dar va exista cod duplicat pe toate
+clasele noi, ceea ce nu e chiar indicat. De aceea varianta mai eleganta e sa pui functionalitatea lipsa in clasa adapter
+
+Cum se implementeaza Adapter pattern:
+1. Ne asiguram ca avem macar 2 clase cu interfete incompatibile:
+- o clasa de "serviciu" deja existenta pe care nu o poti modifica
+- una sau mai multe clase client care ar beneficia de folosirea clasei de serviciu
+2. Declaram interfata clasei client si descriem cum clientul comunica cu serviciul.
+3. Creem o clasa adapter care urmareste interfata client (lasam metodele empty pentru acuma)
+4. Adaugam un camp in clasa adapter care stocheaza referintele catre un obiect de serviciu. Un obicei e sa initializezi
+campul respectiv printr-un constructor, dar cateodata e mai convenabil sa il pasam catre adapter cand apelam metodele.
+5. Implementam 1 cate 1, toate metodele din interfata in clasa adapter. Adaptorul trebuie sa delege treaba catre obiectul
+de serviciu, folosindu-se doar de interfata sau de data pentru conversie.
+6. Clientul ar trebui sa foloseasca adaptorul prin interfata clientului, acest lucru te va ajuta sa schimbi sau sa extinzi
+adaptorul fara sa afectezi codul clientului.

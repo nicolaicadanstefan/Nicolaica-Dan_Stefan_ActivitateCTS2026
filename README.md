@@ -241,7 +241,7 @@ class Magazin {
     }
 }
 // Acum putem folosi orice procesator
-public class src.vreme.adapterobiecte.Main {
+public class src.vreme.adapterobiecte.videoconverter.Main {
     public static void main(String[] args) {
         Magazin magazinPayPal = new Magazin(new PayPal());
         magazinPayPal.proceseazaComanda(100);

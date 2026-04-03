@@ -1,0 +1,2 @@
+Ai o aplicatie cu 3 subsisteme (VideoDecoder, AudioEncoder, FileWriter), fiecare cu o metoda simpla si o clasa facade
+VideoConverterFacade cu o metoda convertVideo(). Clientul vrea sa testeze in main daca clasa facade functioneaza.

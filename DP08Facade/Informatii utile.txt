@@ -1,0 +1,16 @@
+Facade pattern (cand il folosim):
+1. Il folosim cand vrem o interfata limitata dar directa spre un subsistem complex.
+2. Facade incearca sa rezolve problema configurarilor si boilerplate-ului prin asigurarea unei scurtaturi catre cele mai
+folosite functionalitati ala subsistemului care acopera majoritatea cerintelor clientului.
+3. Folosim Facade cand vrem sa structuram un subsistem in layere.
+4. Ca sa reducem numarul de intrari catre fiecare nivel al subsistemului, obligam subsistemele sa comunice doar prin facade.
+
+Cum se implementeaza Facade pattern:
+1. Verificam daca este posibil sa asiguram o interfata mai simpla fata de ce are subsistemul deja. Suntem pe drumul cel
+bun daca aceasta interfata va face codul clientului independent de clasele subsistemelor.
+2. Declaram si implementam aceasta interfata intr-o clasa noua facade. Clasa Facade o sa redirectioneze call-urile clientului
+catre obiectele necesare din subsistem. Clasa Facade ar trebui sa fie responsabil pentru initializarea subsistemului si
+gestionarea duratei de viata daca in codul clientului nu exista deja aceasta parte de gestionare a subsistemului.
+3. Ca sa profitam de acest pattern, trebuie sa facem tot codul clientului sa comunice cu subsistemele doar prin clasa facade.
+Astfel codul clientului este protejat de orice modificare care are loc in subsisteme deoarece acesta comunica cu facade.
+4. Daca clasa Facade devine prea mare, ar trebui extrase parti din comportament intr-o clasa noua facade mai rafinata.

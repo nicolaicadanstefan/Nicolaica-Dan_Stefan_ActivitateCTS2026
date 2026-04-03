@@ -1,0 +1,23 @@
+In cadrul aplicatiei de gestiune a unui magazin de pantofi, se doreste implementarea unui modul de procesare a comenzilor
+ folosind pattern-ul Facade. Atunci cand un client plaseaza o comanda, sistemul trebuie sa coordoneze automat urmatoarele
+ subsisteme independente:
+
+1. Subsistemul de inventar — verifica daca tipul de pantof solicitat este disponibil in stoc
+2. Subsistemul de plata — proceseaza plata comenzii in functie de tipul de plata (Cash/Card)
+3. Subsistemul de livrare — programeaza livrarea comenzii la adresa clientului
+4. Subsistemul de notificari — trimite clientului o confirmare a comenzii
+
+Clientul trebuie sa poata plasa o comanda completa printr-un singur apel de metoda, fara sa interactioneze
+direct cu niciunul dintre subsisteme.
+
+Restrictii de implementare:
+1. Daca tipul de pantof nu exista in stoc sau stocul este 0, se arunca OutOfStockException
+2. Daca suma de plata este negativa sau zero, sau tipul de plata este invalid, se arunca InvalidPaymentException
+3. Daca adresa de livrare este null sau goala, se arunca InvalidDeliveryAddressException
+4. Toate exceptiile custom extind ComandaException
+5. Subsistemele nu pot fi modificate si nu stiu unul de celalalt
+
+Testati solutia cu cel putin 5 scenarii, dintre care:
+1. Cel putin unul arunca OutOfStockException
+2. Cel putin unul foloseste plata cu Card si unul cu Cash
+3. Cel putin unul arunca InvalidDeliveryAddressException

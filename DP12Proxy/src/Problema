@@ -1,0 +1,8 @@
+In cadrul unui spital, este permis accesul vizitatorilor doar daca acestia detin o scrisoare de
+acceptare din partea medicului curent al pacientului vizitat. Suplimentar, odata cu aparitia unui
+numar mare de cazuri de infectare cu virusul Covid, intrarea In spital este permisa doar daca
+vizitatorii sunt echipati corespunzator cu haine de protectie oferite de spital. Astfel, cand se
+strange un numar de minim 3 vizitatori In sala de asteptare, personalul medical Ii echipeaza pe
+vizitatori si le permite accesul In saloane pentru a vizita pacientii. Se doreste implementarea unui
+modul intermediar ce permite accesul In saloane conform noilor restrictii impuse. Implementarea
+trebuie sa tina cont de interfata ISpital primita. 

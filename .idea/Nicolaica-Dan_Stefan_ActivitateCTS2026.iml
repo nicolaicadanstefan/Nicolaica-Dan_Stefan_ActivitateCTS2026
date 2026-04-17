@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/DP07Adapter" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DP08Facade/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DP12Proxy/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DP13Strategy/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

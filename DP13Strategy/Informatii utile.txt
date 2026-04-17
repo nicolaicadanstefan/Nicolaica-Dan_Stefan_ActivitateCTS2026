@@ -1,0 +1,21 @@
+Strategy pattern (cand il folosim):
+1. Il utilizam cand vrem sa folosim diferite variatiuni al unui algoritm dintr-un obiect si sa fim capabili sa schimbam de
+la un algoritm la altul in timpul rularii (runtime).
+2. Il utilizam cand avem multe clase similare care difera doar in modul in care executa un anumit comportament. Strategy
+ne permite sa extragem comportamentul variabil intr-o ierarhie separata de clase si sa combinam clasele originale intr-una
+singura, reducand astfel codul duplicat.
+3. Il utilizam cand vrem sa izolam logica de business a unei clase de detaliile de implementare ale algoritmilor care nu
+sunt la fel de importanti in contextul acelei logici.
+4. Il utilizam cand clasa noastra are o instructiune conditionala masiva (if/switch) care comuta intre diferite variante ale
+aceluiasi algoritm.
+
+Cum se implementeaza Strategy pattern:
+1. In clasa context, identificam algoritmul care sufera multe modificari. De asemenea poate fi o logica conditionala mai mare
+care selecteaza si executa o varianta al aceluiasi algoritm la runtime.
+2. Declaram interfata strategy comuna pentru toate variantele de algoritm.
+3. Una cate una extragem toti algoritmii in clasele lor proprii. Toti ar trebui sa implementeze interfata strategy.
+4. In clasa context, adaugam un camp care memoreaza o referinta la obiectul strategy. Creem un setter pentru reinnoirea
+valorilor din acel field. Contextul ar trebui sa lucreze cu obiectul strategy prin interfata strategy. Contextul ar putea
+avea o interfata definita care ofera strategiei acces la date.
+5. Clientul contextului trebuie asociat cu o strategie viabila care functioneaza cum este de asteptat de context sa performeze
+la jobul principal.

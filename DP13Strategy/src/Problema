@@ -1,0 +1,6 @@
+Creeaza o aplicatie care calculeaza costul de transport al unui pachet în functie de metoda de livrare aleasa. 
+Aplicatia trebuie sa respecte pattern-ul Strategy astfel:
+
+- Clasa Expeditie (Obiect din diagrama) primește o strategie de livrare și are o metoda calculeazaCost() care o executa
+- Interfata Strategy are metoda algoritm()
+- Doua strategii concrete: LivrareRapida și LivrareStandard

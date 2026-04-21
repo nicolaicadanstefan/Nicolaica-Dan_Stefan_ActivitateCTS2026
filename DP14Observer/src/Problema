@@ -1,0 +1,5 @@
+O statie meteo (ObservabilConcret) tine evidenta temperaturii. Doua ecrane:
+- ObserverA = ecran telefon, 
+- ObserverB = ecran smartwatch 
+
+Se aboneaza ai primesc notificari automat cand temperatura se schimba.

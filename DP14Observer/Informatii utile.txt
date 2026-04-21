@@ -1,0 +1,24 @@
+Observer pattern (cand il folosim):
+1. Il utilizam cand o schimbare intr-un obiect necesita schimbarea altor obiecte, iar numarul exact de obiecte de schimbat
+nu este cunoscut dinainte sau se poate modifica dinamic.
+2. Il utilizam cand unele obiecte trebuie sa observe altele, dar doar pentru o perioada limitata de timp sau in cazuri specifice.
+3. Il utilizam cand vrem sa realizam un sistem de tip publish-subscribe, unde un obiect (publisher) notifica automat mai
+multi abonati (subscribers) despre evenimentele care ii afecteaza.
+4. Il utilizam cand vrem sa evitam cuplarea stransa intre obiectul observat si observatori, astfel incat fiecare sa poata
+evolua independent.
+
+Cum se implementeaza Observer pattern:
+1. Identificam clasa care are starea ce se schimba si care trebuie sa notifice alte obiecte. Aceasta va deveni clasa
+Observabil (publisher).
+2. Declaram interfata Observer cu metoda de notificare (ex: notificare()). Aceasta interfata va fi implementata de toti
+observatorii.
+3. Adaugam in clasa Observabil o lista (colectie) de referinte catre obiecte de tip Observer, impreuna cu metodele
+de abonare si dezabonare.
+4. Adaugam in clasa Observabil o metoda notificareObservatori() care itereaza prin lista si apeleaza metoda de notificare
+a fiecarui Observer.
+5. Cream clasa concreta ObservabilConcret care mosteneste Observabil, tine starea actuala si apeleaza notificareObservatori()
+de fiecare data cand starea se modifica (generareEveniment).
+6. Cream clasele concrete ObserverA, ObserverB etc. care implementeaza interfata Observer si definesc reactia lor specifica
+la notificare.
+7. In client (Main), cream obiectul observabil, cream observatorii, ii abonam si declansam schimbari de stare pentru a
+vedea notificarile in actiune.

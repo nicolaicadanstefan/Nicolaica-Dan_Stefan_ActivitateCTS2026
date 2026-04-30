@@ -1,0 +1,19 @@
+Command pattern (cand il folosim):
+1. Il utilizam cand vrem sa transformam o cerere intr-un obiect de sine statator, care contine toate informatiile despre
+cerere. Aceasta transformare permite pasarea cererilor ca argumente ale metodelor, intarzierea sau ordonarea executiei
+lor si suportul pentru operatii care nu pot fi anulate (undo).
+2. Il utilizam cand vrem sa parametrizam obiecte cu operatii, adica atunci cand dorim sa atribuim dinamic diferite
+comenzi unui obiect (ex: butoane, meniuri) fara a cunoaste exact ce vor executa.
+3. Il utilizam cand vrem sa punem in coada, sa programam sau sa executam operatii de la distanta.
+4. Il utilizam cand vrem sa implementam operatii reversibile (undo/redo), deoarece fiecare comanda poate stoca starea
+anterioara si o metoda de revenire.
+
+Cum se implementeaza Command pattern:
+1. Declaram interfata Comanda cu o singura metoda de executie (executa()).
+2. Incepem sa extragem cererile in clase concrete care implementeaza interfata Comanda. Fiecare clasa trebuie sa aiba
+un camp pentru stocarea referintei catre obiectul Executant (Receiver), impreuna cu toti parametrii necesari actiunii.
+3. Identificam clasele care vor juca rolul de Sender (Invoker). Adaugam campuri pentru stocarea comenzilor in aceste clase.
+Senderii trebuie sa comunice cu comenzile doar prin interfata Comanda, nu sa creeze direct obiecte comanda.
+4. Schimbam senderii astfel incat sa execute comanda in loc sa trimita direct o cerere catre Receiver.
+5. Clientul (Main) trebuie sa initializeze obiectele in urmatoarea ordine: crearea Receiver-ului, crearea comenzilor
+(si asocierea lor cu Receiver-ul), crearea Sender-ului (Invoker) si asocierea comenzilor cu acesta.

@@ -1,0 +1,2 @@
+O cafea simpla (ProdusAbstract) poate fi decorata cu lapte (DecoratorConcretA) sau cu zahar (DecoratorConcretB). 
+Decoratorii adauga functionalitate fara sa modifice clasa originala.

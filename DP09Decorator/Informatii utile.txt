@@ -1,0 +1,20 @@
+Decorator pattern (cand il folosim):
+1. Il utilizam cand vrem sa adaugam functionalitate unor obiecte in mod dinamic, fara sa modificam clasa originala
+si fara sa cream subclase noi pentru fiecare combinatie posibila.
+2. Il utilizam cand extinderea prin mostenire este impractica sau imposibila, de exemplu atunci cand clasa este
+finala sau cand numarul de combinatii posibile ar duce la o explozie de subclase.
+3. Il utilizam cand vrem sa putem activa sau dezactiva functionalitati suplimentare la runtime, prin aplicarea sau
+eliminarea decoratorilor.
+4. Il utilizam cand mai multe obiecte trebuie sa imparta un comportament comun, dar fiecare poate avea si
+comportamente proprii aditionale.
+
+Cum se implementeaza Decorator pattern:
+1. Identificam componenta de baza (ProdusAbstract) care defineste interfata comuna pentru obiectul de baza
+si pentru toti decoratorii.
+2. Cream clasa concreta (ProdusConcret) care implementeaza comportamentul de baza fara nicio functionalitate adaugata.
+3. Cream clasa abstracta Decorator care implementeaza aceeasi interfata ca ProdusAbstract si contine o referinta
+catre un obiect ProdusAbstract (produsDecorat). Metoda operatie() a decoratorului delega apelul catre obiectul decorat.
+4. Cream clasele concrete de tip decorator (DecoratorConcretA, DecoratorConcretB) care extind Decorator, apeleaza
+super.operatie() si adauga comportamentul nou prin metodele proprii (metodaNoua()).
+5. In client (Main), cream obiectul de baza si il impachetam (wrap) cu unul sau mai multi decoratori, obtinand
+combinatii de functionalitati fara a modifica clasele existente.

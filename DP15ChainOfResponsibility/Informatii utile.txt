@@ -1,0 +1,19 @@
+Chain of Responsibility pattern (cand il folosim):
+1. Il utilizam cand mai multe obiecte pot gestiona o cerere, dar handlerul concret nu este cunoscut dinainte
+si trebuie determinat dinamic la runtime.
+2. Il utilizam cand vrem sa trimitem o cerere catre mai multe obiecte fara a cupla explicit expeditorul cu
+receptorii posibili.
+3. Il utilizam cand setul de handlere trebuie specificat dinamic, adica lantul poate fi reconstruit sau
+modificat la runtime in functie de context.
+4. Il utilizam cand vrem sa evitam blocurile conditionale masive (if/else sau switch) care verifica ce obiect
+poate gestiona o anumita cerere.
+
+Cum se implementeaza Chain of Responsibility pattern:
+1. Declaram clasa abstracta Handler cu un camp succesor de acelasi tip si cu metoda abstracta gestioneazaCerere().
+Adaugam metodele setSuccesor() si getSuccesor() pentru construirea lantului.
+2. Cream clasele concrete HandlerA, HandlerB etc. care extind Handler si implementeaza gestioneazaCerere().
+Fiecare handler decide daca poate rezolva cererea sau o paseaza mai departe succesorului.
+3. In logica fiecarui handler concret verificam conditia specifica. Daca cererea poate fi gestionata, o rezolvam.
+Daca nu, verificam daca exista un succesor si ii delegam cererea. Daca nu exista succesor, cererea este respinsa.
+4. In client (Main), cream toti handlerii, construim lantul prin setSuccesor() si trimitem cererile primului
+handler din lant, care le va propaga automat pana la rezolvare sau respingere.

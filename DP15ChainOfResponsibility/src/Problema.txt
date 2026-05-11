@@ -1,0 +1,8 @@
+Aprobare cerere de concediu
+
+O cerere de concediu trebuie aprobata în functie de numarul de zile. 
+
+HandlerA (Sef echipa) aproba pana la 3 zile, 
+HandlerB (Manager) aproba pana la 7 zile. 
+
+Daca niciun handler nu poate rezolva, cererea este respinsa.

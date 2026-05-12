@@ -1,0 +1,4 @@
+O companie are departamente (Composite) și angajați individuali (NodFrunza).
+
+Ambele implementează aceeași interfață, astfel încât poți afișa întreaga structură recursiv,
+indiferent dacă e un angajat simplu sau un departament cu sub-departamente.

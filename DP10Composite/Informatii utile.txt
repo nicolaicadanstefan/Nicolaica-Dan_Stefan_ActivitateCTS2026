@@ -1,0 +1,21 @@
+Composite pattern (cand il folosim):
+1. Il utilizam cand vrem sa reprezentam ierarhii de tip parte-intreg, adica structuri arborescente unde
+obiectele individuale si compozitiile de obiecte trebuie tratate uniform.
+2. Il utilizam cand clientul trebuie sa ignore diferenta dintre un obiect simplu (frunza) si un obiect
+compus (composite), apeland aceleasi metode pe ambele tipuri fara logica conditionala suplimentara.
+3. Il utilizam cand structura este recursiva, adica un obiect compus poate contine alte obiecte compuse
+sau obiecte simple, la orice nivel de adancime.
+4. Il utilizam in situatii precum sisteme de fisiere (fisiere si foldere), interfete grafice (componente
+si containere), structuri organizationale (angajati si departamente).
+
+Cum se implementeaza Composite pattern:
+1. Declaram clasa abstracta ComponentaAbstracta cu metodele comune tuturor nodurilor: metodaSpecifica(),
+adaugaNod(), stergeNod(), getNodCopil(). Metodele de gestionare a copiilor pot arunca exceptie in clasa
+de baza, urmand sa fie suprascrise doar in Composite.
+2. Cream clasa NodFrunza care extinde ComponentaAbstracta si implementeaza metodaSpecifica() fara a
+gestiona copii. Reprezinta elementele terminale ale arborelui.
+3. Cream clasa Composite care extinde ComponentaAbstracta, contine o lista de ComponentaAbstracta si
+implementeaza toate metodele: adaugaNod(), stergeNod(), getNodCopil() pentru gestionarea copiilor si
+metodaSpecifica() care se apeleaza recursiv pe toti copiii.
+4. In client (Main), construim arborele adaugand frunze si composites in alte composites, apoi apelam
+metodaSpecifica() pe radacina pentru a parcurge recursiv intreaga structura uniform.

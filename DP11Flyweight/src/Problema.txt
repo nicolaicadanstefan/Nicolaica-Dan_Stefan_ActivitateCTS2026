@@ -1,0 +1,5 @@
+Padure cu copaci
+
+O padure are mii de copaci, dar exista doar cateva tipuri (FlyweightConcret = tip copac cu culoare si specie). 
+FlyweightFactory reutilizeaza obiectele deja create în loc sa creeze altele noi. 
+Fiecare copac are si o pozitie unica (stareTemporara).

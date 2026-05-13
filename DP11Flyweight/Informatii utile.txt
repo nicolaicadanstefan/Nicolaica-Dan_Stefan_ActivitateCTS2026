@@ -1,0 +1,24 @@
+Flyweight pattern (cand il folosim):
+1. Il utilizam cand aplicatia trebuie sa suporte un numar foarte mare de obiecte similare care consuma
+multa memorie, iar majoritatea starii lor poate fi facuta externa (stare temporara) si partajata.
+2. Il utilizam cand obiectele au o stare care poate fi impartita in stare permanenta (intrinseca, shared,
+identica pentru mai multe obiecte) si stare temporara (extrinseca, unica per utilizare, pasata ca parametru).
+3. Il utilizam in jocuri, simulari sau aplicatii grafice unde exista mii de entitati similare (copaci,
+particule, caractere) si performanta memoriei este critica.
+4. Il utilizam cand costul crearii de obiecte noi este mare si reutilizarea celor existente aduce un
+beneficiu semnificativ de performanta.
+
+Cum se implementeaza Flyweight pattern:
+1. Identificam clasa care va deveni Flyweight si separam campurile ei in stare permanenta (intrinseca,
+aceeasi pentru mai multe obiecte, stocata in FlyweightConcret) si stare temporara (extrinseca, unica,
+pasata ca parametru in metoda operatie()).
+2. Declaram interfata Flyweight cu metoda operatie(Stare stareTemporara) care primeste starea temporara
+ca parametru exterior.
+3. Cream clasa FlyweightConcret care implementeaza interfata Flyweight, stocheaza starea permanenta si
+implementeaza operatie() folosind atat starea permanenta cat si cea temporara primita ca parametru.
+4. Cream clasa FlyweightFactory care mentine o colectie (HashMap) de obiecte FlyweightConcret indexate
+dupa o cheie. Metoda getObiectFlyweight(cheie) returneaza obiectul existent daca exista sau il creaza
+si il adauga in colectie daca nu exista.
+5. In client (Main), folosim FlyweightFactory pentru a obtine flyweights in loc sa cream obiecte direct.
+Starea temporara (pozitia, contextul) este pasata la fiecare apel al metodei operatie(), nu stocata
+in obiect.

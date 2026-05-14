@@ -1,0 +1,4 @@
+Framework de testare
+
+TemplateTestare defineste scheletul fix al unui test (testeaza()). 
+Clasele TestareJUnit si TestareNUnit implementeaza pasii concreti diferit, dar ordinea ramane mereu aceeasi.

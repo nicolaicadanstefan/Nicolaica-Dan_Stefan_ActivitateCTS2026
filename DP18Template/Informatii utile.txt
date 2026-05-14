@@ -1,0 +1,19 @@
+Template pattern (cand il folosim):
+1. Il utilizam cand avem un algoritm cu o structura fixa (o succesiune de pasi) dar unii pasi au
+implementari diferite in functie de subclasa.
+2. Il utilizam cand vrem sa evitam duplicarea codului: scheletul algoritmului este scris o singura
+data in clasa parinte, iar subclasele suprascriu doar pasii variabili.
+3. Il utilizam cand vrem sa controlam extensia subclaselor, permitandu-le sa suprascrie doar anumiti
+pasi bine definiti, nu intregul algoritm.
+4. Il utilizam in frameworkuri de testare, procesare de documente, sau orice flux de lucru cu pasi
+obligatorii intr-o ordine fixa.
+
+Cum se implementeaza Template pattern:
+1. Cream clasa abstracta TemplateTestare cu metoda template marcata ca final (testeaza()) care
+defineste ordinea fixa a pasilor algoritmului.
+2. Declaram ca abstract fiecare pas variabil al algoritmului (definesteUnitateTestare(),
+definesteDateIntrare() etc.) pe care subclasele trebuie sa il implementeze.
+3. Cream clasele concrete TestareJUnit si TestareNUnit care extind TemplateTestare si implementeaza
+fiecare pas abstract cu logica lor specifica.
+4. In client (Main), cream obiecte de tip subclasa si apelam metoda template testeaza(). Ordinea
+pasilor este garantata de clasa parinte, indiferent de implementarea subclaselor.

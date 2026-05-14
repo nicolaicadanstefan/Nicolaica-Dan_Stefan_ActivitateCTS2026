@@ -1,0 +1,17 @@
+State pattern (cand il folosim):
+1. Il utilizam cand un obiect trebuie sa isi schimbe comportamentul in functie de starea sa interna,
+iar numarul de stari este mare sau logica de tranzitie este complexa.
+2. Il utilizam cand vrem sa evitam blocuri conditionale masive (if/else sau switch) care verifica starea
+curenta a obiectului si executa comportamente diferite.
+3. Il utilizam cand strile si tranzitiile dintre ele trebuie sa fie usor de extins fara a modifica
+clasele existente.
+4. Il utilizam cand comportamentul unui obiect depinde de starea sa si trebuie sa se schimbe la runtime.
+
+Cum se implementeaza State pattern:
+1. Declaram interfata State cu metoda actiune() care va fi implementata diferit de fiecare stare concreta.
+2. Cream clasele concrete StareConcretaA, StareConcretaB etc. care implementeaza interfata State si
+definesc comportamentul specific fiecarei stari.
+3. Cream clasa Context care contine o referinta la obiectul State curent, o metoda setStare() pentru
+schimbarea starii si o metoda request() care delega executia catre starea curenta prin stare.actiune().
+4. In client (Main), cream contextul, setam starea initiala si schimbam starile la runtime apeland
+setStare() cu obiecte de tip stare concreta diferite.

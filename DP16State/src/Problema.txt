@@ -1,0 +1,3 @@
+Semaforul
+
+Un semafor (Context) are 3 stari: Rosu, Galben, Verde. La fiecare apel request() se executa actiunea starii curente.

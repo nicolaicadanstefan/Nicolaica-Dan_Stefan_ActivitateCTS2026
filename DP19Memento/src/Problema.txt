@@ -1,0 +1,4 @@
+Editor de text cu undo
+
+Un editor de text (Originator) poate salva starea curenta intr-un Memento.
+ManagerStari (CareTaker) tine evidenta istoricului. La undo, editorul se intoarce la starea anterioara.

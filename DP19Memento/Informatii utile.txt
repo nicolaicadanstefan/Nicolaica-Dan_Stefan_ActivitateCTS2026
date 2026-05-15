@@ -1,0 +1,21 @@
+Memento pattern (cand il folosim):
+1. Il utilizam cand vrem sa implementam operatii de undo/redo, salvand starea unui obiect la un
+moment dat pentru a putea reveni la ea ulterior.
+2. Il utilizam cand accesul direct la campurile interne ale unui obiect ar incalca principiul
+encapsularii, dar avem nevoie totusi sa salvam si restauram starea acestuia.
+3. Il utilizam in editoare de text, jocuri (save/load), formulare cu mai multi pasi sau orice
+aplicatie unde utilizatorul trebuie sa poata anula actiuni.
+4. Il utilizam cand istoricul starilor trebuie gestionat de un obiect extern (CareTaker) care nu
+cunoaste si nu modifica continutul starilor salvate.
+
+Cum se implementeaza Memento pattern:
+1. Cream clasa Memento care stocheaza starea obiectului Originator. Memento ofera metode getStare()
+si setStare() pentru accesul la starea interna.
+2. Cream clasa Originator care contine starea curenta si doua metode esentiale: creareMemento()
+care creeaza un obiect Memento cu starea curenta, si setMemento() care restaureaza starea dintr-un
+Memento primit ca parametru.
+3. Cream clasa ManagerStari (CareTaker) care mentine o lista de obiecte Memento prin metodele
+adaugaMemento() si getMemento(). CareTaker nu cunoaste continutul Memento, doar il stocheaza.
+4. In client (Main), cream Originator-ul si ManagerStari, salvam stari prin creareMemento() +
+adaugaMemento(), modificam starea si restauram oricand o stare anterioara prin setMemento() +
+getMemento().
